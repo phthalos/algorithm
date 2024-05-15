@@ -9,7 +9,7 @@ int fact(int n)
 }
 
 int main(void){
-    int n, res=1;
+    int n;
     scanf("%d",&n);
     printf("%d",fact(n));
     return 0;
