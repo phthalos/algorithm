@@ -1,4 +1,4 @@
 main()
 {
-    (getchar() == 48 ? printf("YONSEI") : printf("Leading the Way to the Future"));
+    (printf(getchar() == 48 ? "YONSEI" : "Leading the Way to the Future"));
 }
