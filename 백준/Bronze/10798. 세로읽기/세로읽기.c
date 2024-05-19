@@ -6,11 +6,9 @@
 
 int main(void)
 {
-    char str[COL][ROW] = {'*'};
+    char str[COL][ROW] = {};
     for (int i = 0; i < COL; i++)
-    {
         scanf("%s", str[i]);
-    }
     for (int i = 0; i < ROW; i++)
     {
         for (int j = 0; j < COL; j++)
