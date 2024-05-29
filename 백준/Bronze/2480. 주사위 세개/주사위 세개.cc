@@ -1,33 +1,17 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int main(void)
+int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    int n[3], i, j, mx = 0;
-    for (i = 0; i < 3; i++)
-        cin >> n[i];
-    if (n[0] == n[1] && n[1] == n[2])
-    {
-        cout << 10000 + n[0] * 1000;
-        return 0;
-    }
-    for (i = 0; i < 3; i++)
-    {
-        for (j = i + 1; j < 3; j++)
-        {
-            if (n[i] == n[j])
-            {
-                cout << 1000 + n[i] * 100;
-                return 0;
-            }
-        }
-    }
-    for (i = 0; i < 3; i++)
-    {
-        if (n[i] > mx)
-            mx = n[i];
-    }
-    cout << mx * 100;
-    return 0;
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a == b && b == c)
+        cout << 10000 + a * 1000;
+    else if (a == b || a == c)
+        cout << 1000 + a * 100;
+    else if (b == c)
+        cout << 1000 + b * 100;
+    else
+        cout << max({a, b, c}) * 100;
 }
