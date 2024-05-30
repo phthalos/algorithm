@@ -1,21 +1,17 @@
 #include <iostream>
 using namespace std;
+int n, i, mx, mi;
 int main(void)
 {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    int n[9], i, t = 0, cnt = 0;
-    for (i = 0; i < 9; i++)
+    ios::sync_with_stdio(0); cin.tie(0);
+    for (i = 1; i <= 9; i++)
     {
-        cin >> n[i];
-        if (t < n[i]) t = n[i];
-    }
-    for (i = 0; i < 9; i++)
-    {
-        if (n[i] == t)
+        cin >> n;
+        if (mx < n) // 전역변수는 0으로 초기화된다
         {
-            cout << t << "\n" << i + 1;
-            break;
+            mx = n;
+            mi = i;
         }
     }
+    cout << mx << "\n" << mi;
 }
