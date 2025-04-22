@@ -1,18 +1,12 @@
 #include <stdio.h>
-
+char S['z' - 'a'];
 int main(void)
 {
-    char temp[101];
-    int result[26] = {0};
-    int i = 0;
-    scanf("%s", temp);
-    while (temp[i] != 0)
-    {
-        result[temp[i] - 97]++;
-        i++;
-    }
-    for (i = 0; i < 26; i++)
-        printf("%d ", result[i]);
+    char c;
+    while (scanf("%c", &c) != EOF)
+        S[c - 'a']++;
+    for (int i = 0; i <= 'z' - 'a'; i++)
+        printf("%d ", S[i]);
 
     return 0;
 }
